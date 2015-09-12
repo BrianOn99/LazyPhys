@@ -1,0 +1,30 @@
+<p>這個config file以yaml 寫成，修改前請看manual</p>
+<textarea id="config-edit" class="form-control" rows="25"><%=@config %></textarea>
+<button type="submit" id="config-submit" class="btn btn-primary" disabled="disabled">submit</button>
+
+<!-- modal -->
+<div class="modal" id="id-Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">身份驗證</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary submit">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$(function(){
+  $.ajax({
+    method: "GET",
+    url: "/ajaxQA"
+  })
+    .done(testUser)
+    .fail(function(jqXHR, textStatus) { alert( "Request failed: " + textStatus ); })
+});
+</script>

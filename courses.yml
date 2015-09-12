@@ -1,0 +1,19 @@
+---
+groups:
+- year: 2015-2016
+  sem: '1'
+  courses:
+  - course: phys4051
+    desc: Methods in Theoretical Physics II
+    name: phys4051
+    password: cuhk_Leung
+  - course: phys4050
+    desc: Solid State
+    name: phys4050
+    password: 4050isinteresting
+  - course: phys4021
+    desc: QM2
+    name: phys4021
+    password: quantum2015
+  - course: phys4031
+    desc: Stat Mech

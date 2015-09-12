@@ -1,0 +1,18 @@
+<form action='/lazyphys/edit' method='post'>
+  <% @groups.each do |x| %>
+    <%
+    year = x['year']
+    sem = x['sem']
+    courses = x['courses']
+    %>
+    <div>
+      <h3><%=year %> Sem<%=sem %></h3>
+      <ul class="list-group">
+      <% courses.each do |course_data| %>
+        <% link = Phy.gen_url(year, sem, course_data) %>
+        <li class="list-group-item"><a href="<%=link %>"><%="#{course_data['course']} - #{course_data['desc']}" %></a></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+</form>
